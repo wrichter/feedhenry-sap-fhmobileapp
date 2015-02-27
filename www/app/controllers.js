@@ -24,6 +24,7 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
         // If successful, display the length  of the string.
         if (response && typeof response.CUSTOMER_LIST != 'undefined') {
           $scope.customerList = response.CUSTOMER_LIST;
+          $scope.noticeMessage = undefined;
           $scope.textClassName = "text-success";
         } else {
           $scope.noticeMessage  = "Error: Expected a message from $fh.cloud.";
