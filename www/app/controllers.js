@@ -11,6 +11,8 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
       //Notifying the user that the cloud endpoint is being called.
       $scope.noticeMessage = "Calling Cloud Endpoint";
       $scope.textClassName = "text-info";
+      
+      $scope.customerList = undefined;
 
       //Creating an AngularJS promise as the $fh.cloud function is asynchronous.
       var defer = $q.defer();
@@ -20,8 +22,8 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
       //When the promise has completed, then the notice message can be updated to include result of the $fh.cloud call.
       promise.then(function(response){
         // If successful, display the length  of the string.
-        if (response.msg != null && typeof(response.msg) !== 'undefined') {
-          $scope.noticeMessage = response.msg;
+        if (response && typeof response.CUSTOMER_LIST != 'undefined') {
+          $scope.customerList = response.CUSTOMER_LIST;
           $scope.textClassName = "text-success";
         } else {
           $scope.noticeMessage  = "Error: Expected a message from $fh.cloud.";
