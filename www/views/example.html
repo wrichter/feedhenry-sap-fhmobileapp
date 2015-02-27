@@ -2,7 +2,7 @@
 
 <section id="example">
     <div id="formWrapper">
-        <p id="description">Search for flights</p>
+        <p id="description">Search for Customers</p>
         <br>
 
         <div class="input-group input-group">
@@ -11,6 +11,11 @@
         <br>
         <button type="button" class="btn btn-primary btn-block" ng-click="getNumberOfCharacters()">Search</button>
         <div ng-show="noticeMessage" class="text-center jumbotron hello-result {{textClassName}}">{{noticeMessage}}</div>
+        
+        <div ng-repeat="customer in customerList">
+          {{customer.@CUSTOMERID}}
+        </div>
+        
     </div>
 </section>
 
