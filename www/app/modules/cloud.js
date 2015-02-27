@@ -17,7 +17,7 @@ angular.module('fhcloud', ['ngResource']).service("fhcloud", function() {
         path: cloudEndpoint,
         method: "GET",
         contentType: "application/json",
-        data: {hello: userInput},
+        data: {search: userInput},
         timeout: 15000
       };
 
