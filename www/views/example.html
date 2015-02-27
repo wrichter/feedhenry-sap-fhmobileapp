@@ -13,7 +13,7 @@
         <div ng-show="noticeMessage" class="text-center jumbotron hello-result {{textClassName}}">{{noticeMessage}}</div>
         
         <div ng-repeat="customer in customerList">
-          {{customer.@CUSTOMERID}}
+          {{customer["@CUSTOMERID"]}}
         </div>
         
     </div>
