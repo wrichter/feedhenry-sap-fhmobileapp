@@ -44,7 +44,7 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
          * One of these functions will be called when the $fh.cloud function has completed successully or encountered
          * an error.
          */
-        fhcloud.cloud('hello', userInput, defer.resolve, defer.reject);
+        fhcloud.cloud('search', userInput, defer.resolve, defer.reject);
       }
     };
 });
