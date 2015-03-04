@@ -29,7 +29,7 @@ angular.module('fhcloud', ['ngResource']).service("fhcloud", function() {
         path: cloudEndpoint,
         method: "POST",
         contentType: "application/json",
-        data: userInput,
+        data: { name: userInput },
         timeout: 15000
       };
 
