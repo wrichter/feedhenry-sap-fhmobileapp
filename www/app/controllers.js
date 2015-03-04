@@ -78,7 +78,7 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
       });
 
       // check if userInput is defined
-      if (customerName) {
+      if (custName) {
         /**
          * Pass the userInput to the module containing the $fh.cloud call.
          *
