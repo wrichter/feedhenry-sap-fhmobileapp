@@ -1,0 +1,17 @@
+<fhheader title="FeedHenry" subtext="SAP Test"></fhheader>
+
+<section id="example">
+    <div id="formWrapper">
+        <p id="description">Create Customer</p>
+        <br>
+
+        <div class="input-group input-group">
+            <input type="text" class="form-control" ng-model="custName" placeholder="Enter customer name">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary btn-block" ng-click="getNumberOfCharacters()">Create</button>
+        <div ng-show="noticeMessage" class="text-center jumbotron hello-result {{textClassName}}">{{noticeMessage}}</div>
+    </div>
+</section>
+
+<fhfooter></fhfooter>
