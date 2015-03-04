@@ -23,4 +23,16 @@ angular.module('fhcloud', ['ngResource']).service("fhcloud", function() {
 
       $fh.cloud(params, successCb, errCb);
     };
+    
+     this.cloudCreate = function(cloudEndpoint, userInput, successCb, errCb) {
+      var params = {
+        path: cloudEndpoint,
+        method: "POST",
+        contentType: "application/json",
+        data: userInput,
+        timeout: 15000
+      };
+
+      $fh.cloud(params, successCb, errCb);
+    };
 });
