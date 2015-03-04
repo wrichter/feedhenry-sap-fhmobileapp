@@ -17,4 +17,8 @@ myApp.config(function($routeProvider) {
             templateUrl: 'views/example.html',
             controller: 'MainCtrl'
         })
+        .when('/create', {
+          templateUrl: 'views/create.html',
+          controller: 'MainCtrl'
+        })
 });
