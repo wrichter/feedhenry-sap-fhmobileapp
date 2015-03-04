@@ -61,8 +61,7 @@ myApp.controller('MainCtrl', function($scope, $q, fhcloud) {
         // If successful, display the length  of the string.
         if (response && typeof response['@CUSTOMERNUMBER'] != 'undefined') {
           if (response['@CUSTOMERNUMBER'] > 0) {
-            $scope.customerNumber = response['@CUSTOMERNUMBER'];
-            $scope.noticeMessage = undefined;
+            $scope.noticeMessage = "Created: " +  response['@CUSTOMERNUMBER'];
             $scope.textClassName = "text-success";
           } else {
             scope.noticeMessage  = "Error: Customer not created. SAP returned:" +  JSON.stringify(response);
